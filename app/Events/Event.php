@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Renegade\Events;
 
 /**
  * Class Event.

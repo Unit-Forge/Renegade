@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Search;
+namespace Renegade\Http\Controllers\Backend\Search;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Renegade\Http\Controllers\Controller;
 
 /**
  * Class SearchController.

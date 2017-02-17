@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Events\Frontend\Auth;
+namespace Renegade\Events\Frontend\Auth;
 
-use App\Events\Event;
+use Renegade\Events\Event;
 use Illuminate\Queue\SerializesModels;
 
 /**

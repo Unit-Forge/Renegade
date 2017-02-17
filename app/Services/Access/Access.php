@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Access;
+namespace Renegade\Services\Access;
 
 /**
  * Class Access.

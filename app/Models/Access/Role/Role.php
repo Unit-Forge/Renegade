@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models\Access\Role;
+namespace Renegade\Models\Access\Role;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Access\Role\Traits\RoleAccess;
-use App\Models\Access\Role\Traits\Scope\RoleScope;
-use App\Models\Access\Role\Traits\Attribute\RoleAttribute;
-use App\Models\Access\Role\Traits\Relationship\RoleRelationship;
+use Renegade\Models\Access\Role\Traits\RoleAccess;
+use Renegade\Models\Access\Role\Traits\Scope\RoleScope;
+use Renegade\Models\Access\Role\Traits\Attribute\RoleAttribute;
+use Renegade\Models\Access\Role\Traits\Relationship\RoleRelationship;
 
 /**
  * Class Role.

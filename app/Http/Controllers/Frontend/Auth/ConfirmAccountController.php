@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace Renegade\Http\Controllers\Frontend\Auth;
 
-use App\Models\Access\User\User;
-use App\Http\Controllers\Controller;
-use App\Repositories\Frontend\Access\User\UserRepository;
-use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use Renegade\Models\Access\User\User;
+use Renegade\Http\Controllers\Controller;
+use Renegade\Repositories\Frontend\Access\User\UserRepository;
+use Renegade\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class ConfirmAccountController.

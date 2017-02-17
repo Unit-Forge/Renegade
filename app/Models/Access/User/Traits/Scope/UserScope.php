@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Access\User\Traits\Scope;
+namespace Renegade\Models\Access\User\Traits\Scope;
 
 /**
  * Class UserScope.

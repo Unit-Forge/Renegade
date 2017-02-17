@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories\Backend\History;
+namespace Renegade\Repositories\Backend\History;
 
-use App\Models\History\History;
-use App\Models\History\HistoryType;
+use Renegade\Models\History\History;
+use Renegade\Models\History\HistoryType;
 
 /**
  * Class EloquentHistoryRepository.

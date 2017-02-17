@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Access\Role;
+namespace Renegade\Http\Controllers\Backend\Access\Role;
 
-use App\Models\Access\Role\Role;
-use App\Http\Controllers\Controller;
-use App\Repositories\Backend\Access\Role\RoleRepository;
-use App\Http\Requests\Backend\Access\Role\StoreRoleRequest;
-use App\Http\Requests\Backend\Access\Role\ManageRoleRequest;
-use App\Http\Requests\Backend\Access\Role\UpdateRoleRequest;
-use App\Repositories\Backend\Access\Permission\PermissionRepository;
+use Renegade\Models\Access\Role\Role;
+use Renegade\Http\Controllers\Controller;
+use Renegade\Repositories\Backend\Access\Role\RoleRepository;
+use Renegade\Http\Requests\Backend\Access\Role\StoreRoleRequest;
+use Renegade\Http\Requests\Backend\Access\Role\ManageRoleRequest;
+use Renegade\Http\Requests\Backend\Access\Role\UpdateRoleRequest;
+use Renegade\Repositories\Backend\Access\Permission\PermissionRepository;
 
 /**
  * Class RoleController.

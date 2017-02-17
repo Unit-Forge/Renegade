@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners\Backend\Access\Role;
+namespace Renegade\Listeners\Backend\Access\Role;
 
 /**
  * Class RoleEventListener.
@@ -62,18 +62,18 @@ class RoleEventListener
     public function subscribe($events)
     {
         $events->listen(
-            \App\Events\Backend\Access\Role\RoleCreated::class,
-            'App\Listeners\Backend\Access\Role\RoleEventListener@onCreated'
+            \Renegade\Events\Backend\Access\Role\RoleCreated::class,
+            'Renegade\Listeners\Backend\Access\Role\RoleEventListener@onCreated'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\Role\RoleUpdated::class,
-            'App\Listeners\Backend\Access\Role\RoleEventListener@onUpdated'
+            \Renegade\Events\Backend\Access\Role\RoleUpdated::class,
+            'Renegade\Listeners\Backend\Access\Role\RoleEventListener@onUpdated'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\Role\RoleDeleted::class,
-            'App\Listeners\Backend\Access\Role\RoleEventListener@onDeleted'
+            \Renegade\Events\Backend\Access\Role\RoleDeleted::class,
+            'Renegade\Listeners\Backend\Access\Role\RoleEventListener@onDeleted'
         );
     }
 }

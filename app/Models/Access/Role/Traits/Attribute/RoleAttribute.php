@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Access\Role\Traits\Attribute;
+namespace Renegade\Models\Access\Role\Traits\Attribute;
 
 /**
  * Class RoleAttribute.

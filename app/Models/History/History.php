@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\History;
+namespace Renegade\Models\History;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\History\Traits\Relationship\HistoryRelationship;
+use Renegade\Models\History\Traits\Relationship\HistoryRelationship;
 
 /**
  * Class History

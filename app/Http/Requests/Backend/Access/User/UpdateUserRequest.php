@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Requests\Backend\Access\User;
+namespace Renegade\Http\Requests\Backend\Access\User;
 
-use App\Http\Requests\Request;
+use Renegade\Http\Requests\Request;
 
 /**
  * Class UpdateUserRequest.

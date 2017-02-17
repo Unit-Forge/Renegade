@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Repositories\Frontend\Access\User;
+namespace Renegade\Repositories\Frontend\Access\User;
 
-use App\Models\Access\User\User;
-use App\Repositories\Repository;
+use Renegade\Models\Access\User\User;
+use Renegade\Repositories\Repository;
 use Illuminate\Support\Facades\DB;
-use App\Exceptions\GeneralException;
+use Renegade\Exceptions\GeneralException;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Access\User\SocialLogin;
-use App\Events\Frontend\Auth\UserConfirmed;
-use App\Repositories\Backend\Access\Role\RoleRepository;
-use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use Renegade\Models\Access\User\SocialLogin;
+use Renegade\Events\Frontend\Auth\UserConfirmed;
+use Renegade\Repositories\Backend\Access\Role\RoleRepository;
+use Renegade\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class UserRepository.

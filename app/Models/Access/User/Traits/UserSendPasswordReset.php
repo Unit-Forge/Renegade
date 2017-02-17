@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models\Access\User\Traits;
+namespace Renegade\Models\Access\User\Traits;
 
-use App\Notifications\Frontend\Auth\UserNeedsPasswordReset;
+use Renegade\Notifications\Frontend\Auth\UserNeedsPasswordReset;
 
 /**
  * Class UserSendPasswordReset.

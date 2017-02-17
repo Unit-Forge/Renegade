@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Renegade\Http\Middleware;
 
 use Closure;
 use Illuminate\Session\Store;

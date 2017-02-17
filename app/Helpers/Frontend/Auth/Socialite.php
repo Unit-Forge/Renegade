@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers\Frontend\Auth;
+namespace Renegade\Helpers\Frontend\Auth;
 
 /**
  * Class Socialite.

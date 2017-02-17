@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Access\Role\Traits\Relationship;
+namespace Renegade\Models\Access\Role\Traits\Relationship;
 
 /**
  * Class RoleRelationship.

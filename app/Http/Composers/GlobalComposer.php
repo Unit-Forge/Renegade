@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Composers;
+namespace Renegade\Http\Composers;
 
 use Illuminate\View\View;
 

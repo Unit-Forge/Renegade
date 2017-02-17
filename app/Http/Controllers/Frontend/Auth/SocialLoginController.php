@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace Renegade\Http\Controllers\Frontend\Auth;
 
 use Illuminate\Http\Request;
-use App\Exceptions\GeneralException;
-use App\Http\Controllers\Controller;
+use Renegade\Exceptions\GeneralException;
+use Renegade\Http\Controllers\Controller;
 use Laravel\Socialite\Facades\Socialite;
-use App\Events\Frontend\Auth\UserLoggedIn;
-use App\Repositories\Frontend\Access\User\UserRepository;
-use App\Helpers\Frontend\Auth\Socialite as SocialiteHelper;
+use Renegade\Events\Frontend\Auth\UserLoggedIn;
+use Renegade\Repositories\Frontend\Access\User\UserRepository;
+use Renegade\Helpers\Frontend\Auth\Socialite as SocialiteHelper;
 
 /**
  * Class SocialLoginController.

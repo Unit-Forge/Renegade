@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace Renegade\Providers;
 
 use Illuminate\Support\Facades\View;
-use App\Http\Composers\GlobalComposer;
+use Renegade\Http\Composers\GlobalComposer;
 use Illuminate\Support\ServiceProvider;
 
 /**

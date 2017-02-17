@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Backend\History\Facades;
+namespace Renegade\Repositories\Backend\History\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace Renegade\Http\Controllers\Frontend\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Events\Frontend\Auth\UserRegistered;
+use Renegade\Http\Controllers\Controller;
+use Renegade\Events\Frontend\Auth\UserRegistered;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use App\Http\Requests\Frontend\Auth\RegisterRequest;
-use App\Repositories\Frontend\Access\User\UserRepository;
+use Renegade\Http\Requests\Frontend\Auth\RegisterRequest;
+use Renegade\Repositories\Frontend\Access\User\UserRepository;
 
 /**
  * Class RegisterController.

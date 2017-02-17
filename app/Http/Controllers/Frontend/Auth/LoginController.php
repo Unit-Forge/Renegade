@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace Renegade\Http\Controllers\Frontend\Auth;
 
-use App\Helpers\Auth\Auth;
+use Renegade\Helpers\Auth\Auth;
 use Illuminate\Http\Request;
-use App\Exceptions\GeneralException;
-use App\Http\Controllers\Controller;
-use App\Helpers\Frontend\Auth\Socialite;
-use App\Events\Frontend\Auth\UserLoggedIn;
-use App\Events\Frontend\Auth\UserLoggedOut;
+use Renegade\Exceptions\GeneralException;
+use Renegade\Http\Controllers\Controller;
+use Renegade\Helpers\Frontend\Auth\Socialite;
+use Renegade\Events\Frontend\Auth\UserLoggedIn;
+use Renegade\Events\Frontend\Auth\UserLoggedOut;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 /**

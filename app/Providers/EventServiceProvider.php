@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Renegade\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -29,7 +29,7 @@ class EventServiceProvider extends ServiceProvider
         /*
          * Auth Subscribers
          */
-        \App\Listeners\Frontend\Auth\UserEventListener::class,
+        \Renegade\Listeners\Frontend\Auth\UserEventListener::class,
 
         /*
          * Backend Subscribers
@@ -38,8 +38,8 @@ class EventServiceProvider extends ServiceProvider
         /*
          * Access Subscribers
          */
-        \App\Listeners\Backend\Access\User\UserEventListener::class,
-        \App\Listeners\Backend\Access\Role\RoleEventListener::class,
+        \Renegade\Listeners\Backend\Access\User\UserEventListener::class,
+        \Renegade\Listeners\Backend\Access\Role\RoleEventListener::class,
     ];
 
     /**

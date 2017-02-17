@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace Renegade\Http\Controllers\Frontend\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Repositories\Frontend\Access\User\UserRepository;
-use App\Http\Requests\Frontend\User\ChangePasswordRequest;
+use Renegade\Http\Controllers\Controller;
+use Renegade\Repositories\Frontend\Access\User\UserRepository;
+use Renegade\Http\Requests\Frontend\User\ChangePasswordRequest;
 
 /**
  * Class ChangePasswordController.

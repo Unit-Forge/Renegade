@@ -1,22 +1,22 @@
 <?php
 
-namespace App\Repositories\Backend\Access\User;
+namespace Renegade\Repositories\Backend\Access\User;
 
-use App\Models\Access\User\User;
-use App\Repositories\Repository;
+use Renegade\Models\Access\User\User;
+use Renegade\Repositories\Repository;
 use Illuminate\Support\Facades\DB;
-use App\Exceptions\GeneralException;
+use Renegade\Exceptions\GeneralException;
 use Illuminate\Database\Eloquent\Model;
-use App\Events\Backend\Access\User\UserCreated;
-use App\Events\Backend\Access\User\UserDeleted;
-use App\Events\Backend\Access\User\UserUpdated;
-use App\Events\Backend\Access\User\UserRestored;
-use App\Events\Backend\Access\User\UserDeactivated;
-use App\Events\Backend\Access\User\UserReactivated;
-use App\Events\Backend\Access\User\UserPasswordChanged;
-use App\Repositories\Backend\Access\Role\RoleRepository;
-use App\Events\Backend\Access\User\UserPermanentlyDeleted;
-use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use Renegade\Events\Backend\Access\User\UserCreated;
+use Renegade\Events\Backend\Access\User\UserDeleted;
+use Renegade\Events\Backend\Access\User\UserUpdated;
+use Renegade\Events\Backend\Access\User\UserRestored;
+use Renegade\Events\Backend\Access\User\UserDeactivated;
+use Renegade\Events\Backend\Access\User\UserReactivated;
+use Renegade\Events\Backend\Access\User\UserPasswordChanged;
+use Renegade\Repositories\Backend\Access\Role\RoleRepository;
+use Renegade\Events\Backend\Access\User\UserPermanentlyDeleted;
+use Renegade\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class UserRepository.

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace Renegade\Providers;
 
-use App\Helpers\Macros\Macros;
+use Renegade\Helpers\Macros\Macros;
 use Collective\Html\HtmlServiceProvider;
 
 /**

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace Renegade\Http\Controllers\Frontend;
 
-use App\Http\Controllers\Controller;
+use Renegade\Http\Controllers\Controller;
 
 /**
  * Class FrontendController.

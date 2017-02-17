@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace Renegade\Providers;
 
-use App\Models\Access\User\User;
+use Renegade\Models\Access\User\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -18,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = 'Renegade\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

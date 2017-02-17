@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Requests\Backend\Access\Role;
+namespace Renegade\Http\Requests\Backend\Access\Role;
 
-use App\Http\Requests\Request;
+use Renegade\Http\Requests\Request;
 
 /**
  * Class ManageRoleRequest.

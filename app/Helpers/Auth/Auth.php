@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers\Auth;
+namespace Renegade\Helpers\Auth;
 
 /**
  * Class Auth.

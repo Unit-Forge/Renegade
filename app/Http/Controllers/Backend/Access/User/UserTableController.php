@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Access\User;
+namespace Renegade\Http\Controllers\Backend\Access\User;
 
-use App\Http\Controllers\Controller;
+use Renegade\Http\Controllers\Controller;
 use Yajra\Datatables\Facades\Datatables;
-use App\Repositories\Backend\Access\User\UserRepository;
-use App\Http\Requests\Backend\Access\User\ManageUserRequest;
+use Renegade\Repositories\Backend\Access\User\UserRepository;
+use Renegade\Http\Requests\Backend\Access\User\ManageUserRequest;
 
 /**
  * Class UserTableController.

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Access\Facades;
+namespace Renegade\Services\Access\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

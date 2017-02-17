@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Access\User;
+namespace Renegade\Models\Access\User;
 
 use Illuminate\Database\Eloquent\Model;
 

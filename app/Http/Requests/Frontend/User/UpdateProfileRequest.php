@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Requests\Frontend\User;
+namespace Renegade\Http\Requests\Frontend\User;
 
-use App\Http\Requests\Request;
+use Renegade\Http\Requests\Request;
 
 /**
  * Class UpdateProfileRequest.

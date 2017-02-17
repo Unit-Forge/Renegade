@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners\Frontend\Auth;
+namespace Renegade\Listeners\Frontend\Auth;
 
 /**
  * Class UserEventListener.
@@ -47,23 +47,23 @@ class UserEventListener
     public function subscribe($events)
     {
         $events->listen(
-            \App\Events\Frontend\Auth\UserLoggedIn::class,
-            'App\Listeners\Frontend\Auth\UserEventListener@onLoggedIn'
+            \Renegade\Events\Frontend\Auth\UserLoggedIn::class,
+            'Renegade\Listeners\Frontend\Auth\UserEventListener@onLoggedIn'
         );
 
         $events->listen(
-            \App\Events\Frontend\Auth\UserLoggedOut::class,
-            'App\Listeners\Frontend\Auth\UserEventListener@onLoggedOut'
+            \Renegade\Events\Frontend\Auth\UserLoggedOut::class,
+            'Renegade\Listeners\Frontend\Auth\UserEventListener@onLoggedOut'
         );
 
         $events->listen(
-            \App\Events\Frontend\Auth\UserRegistered::class,
-            'App\Listeners\Frontend\Auth\UserEventListener@onRegistered'
+            \Renegade\Events\Frontend\Auth\UserRegistered::class,
+            'Renegade\Listeners\Frontend\Auth\UserEventListener@onRegistered'
         );
 
         $events->listen(
-            \App\Events\Frontend\Auth\UserConfirmed::class,
-            'App\Listeners\Frontend\Auth\UserEventListener@onConfirmed'
+            \Renegade\Events\Frontend\Auth\UserConfirmed::class,
+            'Renegade\Listeners\Frontend\Auth\UserEventListener@onConfirmed'
         );
     }
 }

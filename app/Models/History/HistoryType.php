@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\History;
+namespace Renegade\Models\History;
 
 use Illuminate\Database\Eloquent\Model;
 

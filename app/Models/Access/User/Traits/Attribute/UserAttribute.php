@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Access\User\Traits\Attribute;
+namespace Renegade\Models\Access\User\Traits\Attribute;
 
 /**
  * Class UserAttribute.

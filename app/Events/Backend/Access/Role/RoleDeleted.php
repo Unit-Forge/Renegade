@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Events\Backend\Access\Role;
+namespace Renegade\Events\Backend\Access\Role;
 
-use App\Events\Event;
+use Renegade\Events\Event;
 use Illuminate\Queue\SerializesModels;
 
 /**

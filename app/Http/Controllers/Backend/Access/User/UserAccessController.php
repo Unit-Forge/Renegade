@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Access\User;
+namespace Renegade\Http\Controllers\Backend\Access\User;
 
-use App\Helpers\Auth\Auth;
-use App\Models\Access\User\User;
-use App\Exceptions\GeneralException;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Backend\Access\User\ManageUserRequest;
+use Renegade\Helpers\Auth\Auth;
+use Renegade\Models\Access\User\User;
+use Renegade\Exceptions\GeneralException;
+use Renegade\Http\Controllers\Controller;
+use Renegade\Http\Requests\Backend\Access\User\ManageUserRequest;
 
 /**
  * Class UserAccessController.

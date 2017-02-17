@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Generator;
-use App\Models\Access\Role\Role;
-use App\Models\Access\User\User;
+use Renegade\Models\Access\Role\Role;
+use Renegade\Models\Access\User\User;
 
 /*
 |--------------------------------------------------------------------------

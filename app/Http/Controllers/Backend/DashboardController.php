@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace Renegade\Http\Controllers\Backend;
 
-use App\Http\Controllers\Controller;
+use Renegade\Http\Controllers\Controller;
 
 /**
  * Class DashboardController.

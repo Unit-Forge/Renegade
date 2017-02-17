@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Auth;
+namespace Renegade\Http\Controllers\Frontend\Auth;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use Renegade\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
-use App\Repositories\Frontend\Access\User\UserRepository;
+use Renegade\Repositories\Frontend\Access\User\UserRepository;
 
 /**
  * Class ResetPasswordController.

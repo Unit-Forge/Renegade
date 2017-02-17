@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models\Access\User\Traits\Relationship;
+namespace Renegade\Models\Access\User\Traits\Relationship;
 
-use App\Models\Access\User\SocialLogin;
+use Renegade\Models\Access\User\SocialLogin;
 
 /**
  * Class UserRelationship.

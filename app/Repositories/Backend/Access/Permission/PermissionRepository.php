@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories\Backend\Access\Permission;
+namespace Renegade\Repositories\Backend\Access\Permission;
 
-use App\Repositories\Repository;
-use App\Models\Access\Permission\Permission;
+use Renegade\Repositories\Repository;
+use Renegade\Models\Access\Permission\Permission;
 
 /**
  * Class PermissionRepository.

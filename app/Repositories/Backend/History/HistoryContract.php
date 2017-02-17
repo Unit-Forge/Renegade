@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Backend\History;
+namespace Renegade\Repositories\Backend\History;
 
 /**
  * Interface HistoryContract.

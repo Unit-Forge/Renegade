@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Access\User\Traits;
+namespace Renegade\Models\Access\User\Traits;
 
 /**
  * Class UserAccess.

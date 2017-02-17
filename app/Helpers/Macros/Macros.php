@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Helpers\Macros;
+namespace Renegade\Helpers\Macros;
 
 use Collective\Html\FormBuilder;
-use App\Helpers\Macros\Traits\Dropdowns;
+use Renegade\Helpers\Macros\Traits\Dropdowns;
 
 /**
  * Class Macros.

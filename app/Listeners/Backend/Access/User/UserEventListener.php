@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners\Backend\Access\User;
+namespace Renegade\Listeners\Backend\Access\User;
 
 /**
  * Class UserEventListener.
@@ -132,43 +132,43 @@ class UserEventListener
     public function subscribe($events)
     {
         $events->listen(
-            \App\Events\Backend\Access\User\UserCreated::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onCreated'
+            \Renegade\Events\Backend\Access\User\UserCreated::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onCreated'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\User\UserUpdated::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onUpdated'
+            \Renegade\Events\Backend\Access\User\UserUpdated::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onUpdated'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\User\UserDeleted::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onDeleted'
+            \Renegade\Events\Backend\Access\User\UserDeleted::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onDeleted'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\User\UserRestored::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onRestored'
+            \Renegade\Events\Backend\Access\User\UserRestored::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onRestored'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\User\UserPermanentlyDeleted::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onPermanentlyDeleted'
+            \Renegade\Events\Backend\Access\User\UserPermanentlyDeleted::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onPermanentlyDeleted'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\User\UserPasswordChanged::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onPasswordChanged'
+            \Renegade\Events\Backend\Access\User\UserPasswordChanged::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onPasswordChanged'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\User\UserDeactivated::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onDeactivated'
+            \Renegade\Events\Backend\Access\User\UserDeactivated::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onDeactivated'
         );
 
         $events->listen(
-            \App\Events\Backend\Access\User\UserReactivated::class,
-            'App\Listeners\Backend\Access\User\UserEventListener@onReactivated'
+            \Renegade\Events\Backend\Access\User\UserReactivated::class,
+            'Renegade\Listeners\Backend\Access\User\UserEventListener@onReactivated'
         );
     }
 }

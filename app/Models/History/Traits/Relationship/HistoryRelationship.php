@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\History\Traits\Relationship;
+namespace Renegade\Models\History\Traits\Relationship;
 
-use App\Models\Access\User\User;
-use App\Models\History\HistoryType;
+use Renegade\Models\Access\User\User;
+use Renegade\Models\History\HistoryType;
 
 /**
  * Class HistoryRelationship.

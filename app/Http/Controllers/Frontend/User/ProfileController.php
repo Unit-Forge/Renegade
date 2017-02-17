@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\User;
+namespace Renegade\Http\Controllers\Frontend\User;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Frontend\User\UpdateProfileRequest;
-use App\Repositories\Frontend\Access\User\UserRepository;
+use Renegade\Http\Controllers\Controller;
+use Renegade\Http\Requests\Frontend\User\UpdateProfileRequest;
+use Renegade\Repositories\Frontend\Access\User\UserRepository;
 
 /**
  * Class ProfileController.

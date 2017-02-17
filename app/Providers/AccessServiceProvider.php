@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace Renegade\Providers;
 
-use App\Services\Access\Access;
+use Renegade\Services\Access\Access;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -58,7 +58,7 @@ class AccessServiceProvider extends ServiceProvider
     {
         $this->app->booting(function () {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Access', \App\Services\Access\Facades\Access::class);
+            $loader->alias('Access', \Renegade\Services\Access\Facades\Access::class);
         });
     }
 

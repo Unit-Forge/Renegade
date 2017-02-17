@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Helpers\Macros\Traits;
+namespace Renegade\Helpers\Macros\Traits;
 
 /**
  * Class Dropdowns.
