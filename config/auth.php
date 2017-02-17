@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Access\User\User;
+use Renegade\Models\Access\User\User;
 
 return [
 
