@@ -1,2 +1,3 @@
 ## Unit-Forge - Renegade
-Contributors: Dill, J.
+Contributors: Dill, J.  
+Rodriguez, G.  
