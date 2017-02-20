@@ -19,5 +19,10 @@ Features list and statuses to follow.
 9. Run Gulp `gulp` on Windows systems you will need to run gulp within the `/node_modules/.bin/gulp`
 10. Site should be deployed and at a clean state
 
+## Contributing Instructions
+All changes made into the master branch will require a pull request. Please branch off and once you complete your work commit and creat e formal pull request detailing your changes, any possible compatibility issues, and any notable changes/features.  
+  
+Once the pull request has been created it will need to be reviewed by a maintainer and then merged into the master branch.
+
 ## Testing
 The application can be tested using phpunit. Simply run `phpunit` in the project directory and it will execute its test barrage (this will clear all data, so do not run it on a production or staging enviroment).
