@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 /*Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');*/
+
+
+
+
+
+Route::group([
+    'prefix' => 'unit',
+    'namespace' => 'API\Unit'
+], function () {
+    Route::get('ranks', 'RankController@index')->name('api.unit.ranks');
+});
