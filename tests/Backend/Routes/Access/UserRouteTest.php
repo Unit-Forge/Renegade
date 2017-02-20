@@ -2,10 +2,10 @@
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Event;
-use App\Events\Backend\Access\User\UserRestored;
-use App\Events\Backend\Access\User\UserDeactivated;
-use App\Events\Backend\Access\User\UserReactivated;
-use App\Events\Backend\Access\User\UserPermanentlyDeleted;
+use Renegade\Events\Backend\Access\User\UserRestored;
+use Renegade\Events\Backend\Access\User\UserDeactivated;
+use Renegade\Events\Backend\Access\User\UserReactivated;
+use Renegade\Events\Backend\Access\User\UserPermanentlyDeleted;
 
 /**
  * Class UserRouteTest.

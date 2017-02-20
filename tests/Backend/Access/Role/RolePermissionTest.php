@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Access\Permission\Permission;
+use Renegade\Models\Access\Permission\Permission;
 
 class RolePermissionTest extends TestCase
 {

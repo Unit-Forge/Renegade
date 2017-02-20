@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Access\User\User;
-use App\Repositories\Backend\History\Facades\History;
+use Renegade\Models\Access\User\User;
+use Renegade\Repositories\Backend\History\Facades\History;
 
 /**
  * Class HistoryRenderEntityTest.

@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Access\User\User;
+use Renegade\Models\Access\User\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Event;
-use App\Events\Frontend\Auth\UserConfirmed;
+use Renegade\Events\Frontend\Auth\UserConfirmed;
 use Illuminate\Support\Facades\Notification;
-use App\Notifications\Frontend\Auth\UserNeedsConfirmation;
+use Renegade\Notifications\Frontend\Auth\UserNeedsConfirmation;
 
 /**
  * Class LoggedOutRouteTest.

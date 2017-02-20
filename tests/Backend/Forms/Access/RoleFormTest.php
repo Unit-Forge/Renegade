@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Access\Role\Role;
+use Renegade\Models\Access\Role\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
-use App\Events\Backend\Access\Role\RoleCreated;
-use App\Events\Backend\Access\Role\RoleDeleted;
-use App\Events\Backend\Access\Role\RoleUpdated;
+use Renegade\Events\Backend\Access\Role\RoleCreated;
+use Renegade\Events\Backend\Access\Role\RoleDeleted;
+use Renegade\Events\Backend\Access\Role\RoleUpdated;
 
 /**
  * Class RoleFormTest.

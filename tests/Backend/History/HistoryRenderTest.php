@@ -1,6 +1,6 @@
 <?php
 
-use App\Repositories\Backend\History\Facades\History;
+use Renegade\Repositories\Backend\History\Facades\History;
 
 /**
  * Class HistoryRenderTest.

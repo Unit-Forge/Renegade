@@ -2,6 +2,7 @@
 
 namespace Renegade\Models\Access\User;
 
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Renegade\Models\Access\User\Traits\UserAccess;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -16,7 +17,8 @@ use Renegade\Models\Access\User\Traits\Relationship\UserRelationship;
  */
 class User extends Authenticatable
 {
-    use UserScope,
+    use HasApiTokens,
+        UserScope,
         UserAccess,
         Notifiable,
         SoftDeletes,
@@ -57,5 +59,23 @@ class User extends Authenticatable
     {
         parent::__construct($attributes);
         $this->table = config('access.users_table');
+    }
+
+    /**
+     * One to One Relationship for Application
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function application()
+    {
+        return $this->hasOne('Renegade\Models\Access\User\Application');
+    }
+
+    /**
+     * One to Many Relationship for Teamspeak models
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function teamspeak()
+    {
+        return $this->hasMany('Renegade\Models\Access\User\Teamspeak');
     }
 }

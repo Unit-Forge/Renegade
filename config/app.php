@@ -173,6 +173,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -203,6 +204,7 @@ return [
         Renegade\Providers\EventServiceProvider::class,
         Renegade\Providers\HistoryServiceProvider::class,
         Renegade\Providers\RouteServiceProvider::class,
+
     ],
 
     /*

@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Access\Role\Role;
-use App\Models\Access\User\User;
+use Renegade\Models\Access\Role\Role;
+use Renegade\Models\Access\User\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
