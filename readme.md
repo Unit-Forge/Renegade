@@ -20,4 +20,4 @@ Features list and statuses to follow.
 10. Site should be deployed and at a clean state
 
 ## Testing
-The application can be tested using phpunit. Simply run `phpunit` in the project directory and it will execute its test barrage (this will clear all data, so do not run it on a production or staging enviroment.
+The application can be tested using phpunit. Simply run `phpunit` in the project directory and it will execute its test barrage (this will clear all data, so do not run it on a production or staging enviroment).
