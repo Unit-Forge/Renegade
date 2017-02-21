@@ -13,6 +13,17 @@ return [
     |
     */
 
+
+    'api' => [
+        'ranks' => [
+            'already_exists'    => 'That rank already exists. Please choose a different name.',
+            'create_error'      => 'There was a problem creating this rank. Please try again.',
+            'delete_error'      => 'There was a problem deleting this rank. Please try again.',
+            'not_found'         => 'That rank does not exist.',
+            'update_error'      => 'There was a problem updating this rank. Please try again.',
+        ],
+    ],
+
     'backend' => [
         'access' => [
             'roles' => [
