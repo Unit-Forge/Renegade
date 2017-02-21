@@ -5,6 +5,7 @@ namespace Renegade\Http\Controllers\API\Unit;
 use Illuminate\Http\Request;
 use Renegade\Http\Controllers\Controller;
 use Renegade\Http\Requests\API\Unit\CreateRankRequest;
+use Renegade\Http\Requests\API\Unit\UpdateRankRequest;
 use Renegade\Http\Requests\Frontend\User\UpdateProfileRequest;
 use Renegade\Models\Unit\Rank;
 use Renegade\Repositories\API\Unit\RankRepository;
@@ -57,7 +58,7 @@ class RankController extends Controller
         return $this->ranks->show($id);
     }
 
-    public function update($id, UpdateProfileRequest $request)
+    public function update($id, UpdateRankRequest $request)
     {
         $rank = Rank::findOrFail($id);
         return $this->ranks->update($rank,$request->all());
