@@ -4,11 +4,9 @@ namespace Renegade\Http\Controllers\API\Auth;
 
 use Illuminate\Http\Request;
 use Renegade\Http\Controllers\Controller;
-use Renegade\Http\Requests\API\Auth\CreateUserRequest;
-use Renegade\Http\Requests\API\Auth\UpdateUserRequest;
-use Renegade\Http\Requests\API\Unit\CreateRankRequest;
-use Renegade\Http\Requests\API\Unit\DeleteRankRequest;
-use Renegade\Http\Requests\API\Unit\UpdateRankRequest;
+use Renegade\Http\Requests\API\Auth\User\CreateUserRequest;
+use Renegade\Http\Requests\API\Auth\User\DeleteUserRequest;
+use Renegade\Http\Requests\API\Auth\User\UpdateUserRequest;
 use Renegade\Models\Access\User\User;
 use Renegade\Repositories\API\Auth\UserRepository;
 

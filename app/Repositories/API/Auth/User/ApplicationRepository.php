@@ -1,7 +1,8 @@
 <?php
 
-namespace Renegade\Repositories\API\Auth;
+namespace Renegade\Repositories\API\Auth\User;
 
+use Renegade\Models\Access\User\Application;
 use Renegade\Models\Access\User\User;
 use Renegade\Repositories\Repository;
 use Illuminate\Support\Facades\DB;
@@ -9,42 +10,35 @@ use Renegade\Exceptions\GeneralException;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class UserRepository.
+ * Class ApplicationRepository.
  */
-class UserRepository extends Repository
+class ApplicationRepository extends Repository
 {
     /**
      * Associated Repository Model.
      */
-    const MODEL = User::class;
+    const MODEL = Application::class;
 
     /**
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function getAllUsers()
-    {
-        $users = User::all();
-        return response()->json($users->toArray());
-    }
-
-    /**
+     * @param Model $user
      * @param $input
      * @return \Illuminate\Http\JsonResponse
      */
-    public function create($input)
+    public function create(Model $user, $input)
     {
-        $user = User::create($input);
-        return response()->json($user->toArray(),201);
+        return response()->json($user->application()->create($input)->toArray(),201);
     }
 
     /**
-     * @param $id
+    /**
+     * @param Model $user
      * @return \Illuminate\Http\JsonResponse
      */
-    public function show($id)
+    public function show(Model $user)
     {
-        $user = User::findOrFail($id);
-        return response()->json($user->toArray(),200);
+        $application = $user->application;
+
+        return response()->json($application->toArray(),200);
     }
 
     /**
@@ -54,11 +48,11 @@ class UserRepository extends Repository
      */
     public function update(Model $user, array $input)
     {
-        if($user->update($input))
+        if($user->application()->update($input))
         {
             return response()->json($user->toArray(),200);
         } else {
-            return response()->json(['error' => trans('exception.users.update_error')],404);
+            return response()->json(['error' => trans('exception.users.application.update_error')],404);
         }
     }
 
@@ -68,11 +62,11 @@ class UserRepository extends Repository
      */
     public function delete(Model $user)
     {
-        if($user->delete())
+        if($user->application()->delete())
         {
             return response()->json([],204);
         } else {
-            return response()->json(['error' => trans('exception.users.delete_error')],404);
+            return response()->json(['error' => trans('exception.users.application.delete_error')],404);
         }
     }
 

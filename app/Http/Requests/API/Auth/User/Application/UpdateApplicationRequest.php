@@ -1,10 +1,10 @@
 <?php
 
-namespace Renegade\Http\Requests\API\Auth;
+namespace Renegade\Http\Requests\API\Auth\User\Application;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class DeleteUserRequest extends FormRequest
+class UpdateApplicationRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
