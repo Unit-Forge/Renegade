@@ -61,17 +61,18 @@ class UserController extends Controller
      */
     public function update($id, UpdateUserRequest $request)
     {
-        $rank = User::findOrFail($id);
-        return $this->users->update($rank,$request->all());
+        $user = User::findOrFail($id);
+        return $this->users->update($user,$request->all());
     }
 
     /**
      * @param $id
+     * @param DeleteUserRequest $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function delete($id, DeleteRankRequest $request)
+    public function delete($id, DeleteUserRequest $request)
     {
-        $rank = User::findOrFail($id);
-        return $this->users->delete($rank);
+        $user = User::findOrFail($id);
+        return $this->users->delete($user);
     }
 }

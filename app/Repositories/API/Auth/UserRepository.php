@@ -58,7 +58,7 @@ class UserRepository extends Repository
         {
             return response()->json($user->toArray(),200);
         } else {
-            return response()->json(['error' => trans('exception.users.update_error')],404);
+            return response()->json(['error' => trans('exceptions.api.users.update_error')],404);
         }
     }
 
@@ -72,7 +72,7 @@ class UserRepository extends Repository
         {
             return response()->json([],204);
         } else {
-            return response()->json(['error' => trans('exception.users.delete_error')],404);
+            return response()->json(['error' => trans('exceptions.api.users.delete_error')],404);
         }
     }
 

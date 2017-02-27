@@ -11,6 +11,10 @@ use Renegade\Models\Access\User\Application;
 use Renegade\Models\Access\User\User;
 use Renegade\Repositories\API\Auth\User\ApplicationRepository;
 
+/**
+ * Class ApplicationController
+ * @package Renegade\Http\Controllers\API\Auth\User
+ */
 class ApplicationController extends Controller
 {
     /**
@@ -20,7 +24,7 @@ class ApplicationController extends Controller
 
     /**
      * UserController constructor.
-     * @param ApplicationController $application
+     * @param ApplicationRepository $application
      */
     public function __construct(ApplicationRepository $application)
     {
@@ -45,6 +49,28 @@ class ApplicationController extends Controller
     {
         $user = User::findOrFail($id);
         return $this->application->create($user,$request->all());
+    }
+
+    /**
+     * @param $id
+     * @param UpdateApplicationRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function update($id, UpdateApplicationRequest $request)
+    {
+        $user = User::findOrFail($id);
+        return $this->application->update($user,$request->all());
+    }
+
+    /**
+     * @param $id
+     * @param DeleteApplicationRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete($id, DeleteApplicationRequest $request)
+    {
+        $user = User::findOrFail($id);
+        return $this->application->delete($user,$request->all());
     }
 
 }

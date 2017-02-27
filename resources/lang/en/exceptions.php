@@ -30,6 +30,7 @@ return [
             ]
         ],
         'ranks' => [
+
             'already_exists'    => 'That rank already exists. Please choose a different name.',
             'create_error'      => 'There was a problem creating this rank. Please try again.',
             'delete_error'      => 'There was a problem deleting this rank. Please try again.',

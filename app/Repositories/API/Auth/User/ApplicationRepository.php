@@ -37,6 +37,9 @@ class ApplicationRepository extends Repository
     public function show(Model $user)
     {
         $application = $user->application;
+        // Deal with misssing application
+        if(!isset($application))
+            return response()->json(['error' => trans('exceptions.api.users.application.not_found')],404);
 
         return response()->json($application->toArray(),200);
     }
@@ -50,9 +53,9 @@ class ApplicationRepository extends Repository
     {
         if($user->application()->update($input))
         {
-            return response()->json($user->toArray(),200);
+            return response()->json($user->application->toArray(),200);
         } else {
-            return response()->json(['error' => trans('exception.users.application.update_error')],404);
+            return response()->json(['error' => trans('exceptions.api.users.application.update_error')],404);
         }
     }
 
@@ -66,7 +69,7 @@ class ApplicationRepository extends Repository
         {
             return response()->json([],204);
         } else {
-            return response()->json(['error' => trans('exception.users.application.delete_error')],404);
+            return response()->json(['error' => trans('exceptions.api.users.application.delete_error')],404);
         }
     }
 
