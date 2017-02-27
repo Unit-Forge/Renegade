@@ -60,7 +60,7 @@ class RankRepository extends Repository
         {
             return response()->json($rank->toArray(),200);
         } else {
-            return response()->json(['error' => trans('exception.ranks.update_error')],404);
+            return response()->json(['error' => trans('exceptions.api.ranks.update_error')],404);
         }
     }
 
@@ -74,7 +74,7 @@ class RankRepository extends Repository
         {
             return response()->json([],204);
         } else {
-            return response()->json(['error' => trans('exception.ranks.delete_error')],404);
+            return response()->json(['error' => trans('exceptions.api.ranks.delete_error')],404);
         }
     }
 

@@ -30,6 +30,17 @@ Route::group([
 
 
 Route::group([
+    'namespace' => 'API\Auth\User'
+], function () {
+    Route::get('users/{id}/application', 'ApplicationController@show')->name('api.auth.users.application.show');
+    Route::post('users/{id}/application', 'ApplicationController@create')->name('api.auth.users.application.create');
+    Route::put('users/{id}/application', 'ApplicationController@update')->name('api.auth.users.application.update');
+    Route::delete('users/{id}/application', 'ApplicationController@delete')->name('api.auth.users.application.delete');
+});
+
+
+
+Route::group([
     'prefix' => 'unit',
     'namespace' => 'API\Unit'
 ], function () {

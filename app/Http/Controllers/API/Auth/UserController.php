@@ -4,11 +4,9 @@ namespace Renegade\Http\Controllers\API\Auth;
 
 use Illuminate\Http\Request;
 use Renegade\Http\Controllers\Controller;
-use Renegade\Http\Requests\API\Auth\CreateUserRequest;
-use Renegade\Http\Requests\API\Auth\UpdateUserRequest;
-use Renegade\Http\Requests\API\Unit\CreateRankRequest;
-use Renegade\Http\Requests\API\Unit\DeleteRankRequest;
-use Renegade\Http\Requests\API\Unit\UpdateRankRequest;
+use Renegade\Http\Requests\API\Auth\User\CreateUserRequest;
+use Renegade\Http\Requests\API\Auth\User\DeleteUserRequest;
+use Renegade\Http\Requests\API\Auth\User\UpdateUserRequest;
 use Renegade\Models\Access\User\User;
 use Renegade\Repositories\API\Auth\UserRepository;
 
@@ -63,17 +61,18 @@ class UserController extends Controller
      */
     public function update($id, UpdateUserRequest $request)
     {
-        $rank = User::findOrFail($id);
-        return $this->users->update($rank,$request->all());
+        $user = User::findOrFail($id);
+        return $this->users->update($user,$request->all());
     }
 
     /**
      * @param $id
+     * @param DeleteUserRequest $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function delete($id, DeleteRankRequest $request)
+    public function delete($id, DeleteUserRequest $request)
     {
-        $rank = User::findOrFail($id);
-        return $this->users->delete($rank);
+        $user = User::findOrFail($id);
+        return $this->users->delete($user);
     }
 }
