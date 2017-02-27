@@ -15,6 +15,13 @@ return [
 
 
     'api' => [
+        'users' => [
+            'already_exists'    => 'That user already exists. Please choose a different name.',
+            'create_error'      => 'There was a problem creating this user. Please try again.',
+            'delete_error'      => 'There was a problem deleting this user. Please try again.',
+            'not_found'         => 'That user does not exist.',
+            'update_error'      => 'There was a problem updating this user. Please try again.',
+        ],
         'ranks' => [
             'already_exists'    => 'That rank already exists. Please choose a different name.',
             'create_error'      => 'There was a problem creating this rank. Please try again.',

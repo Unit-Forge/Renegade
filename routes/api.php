@@ -18,7 +18,15 @@ use Illuminate\Http\Request;
 })->middleware('auth:api');*/
 
 
-
+Route::group([
+    'namespace' => 'API\Auth'
+], function () {
+    Route::get('users', 'UserController@index')->name('api.auth.users');
+    Route::post('users', 'UserController@create')->name('api.auth.users.create');
+    Route::get('users/{id}', 'UserController@show')->name('api.auth.users.show');
+    Route::put('users/{id}', 'UserController@update')->name('api.auth.users.update');
+    Route::delete('users/{id}', 'UserController@delete')->name('api.auth.users.delete');
+});
 
 
 Route::group([
