@@ -72,4 +72,17 @@ class RankAPITest extends TestCase
             ]);
     }
 
+    /**
+     * @group ranks-api
+     * Tests deleting a rank
+     */
+    public function testDeleteRank()
+    {
+        // Create a Rank
+        $rank = \Renegade\Models\Unit\Rank::create(['name' => 'Captain']);
+        $this
+            ->json('DELETE','api/unit/ranks/'.$rank->id)
+            ->assertResponseStatus(204);
+    }
+
 }

@@ -39,19 +39,42 @@ class RankRepository extends Repository
         return response()->json($rank->toArray(),201);
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function show($id)
     {
         $rank = Rank::findOrFail($id);
         return response()->json($rank->toArray(),200);
     }
 
+    /**
+     * @param Model $rank
+     * @param array $input
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function update(Model $rank, array $input)
     {
         if($rank->update($input))
         {
             return response()->json($rank->toArray(),200);
         } else {
-            return response()->json(['error' => trans('exception.ranks.update_error')],400);
+            return response()->json(['error' => trans('exception.ranks.update_error')],404);
+        }
+    }
+
+    /**
+     * @param Model $rank
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete(Model $rank)
+    {
+        if($rank->delete())
+        {
+            return response()->json([],204);
+        } else {
+            return response()->json(['error' => trans('exception.ranks.delete_error')],404);
         }
     }
 

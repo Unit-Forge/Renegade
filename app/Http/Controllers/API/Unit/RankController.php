@@ -58,10 +58,25 @@ class RankController extends Controller
         return $this->ranks->show($id);
     }
 
+    /**
+     * @param $id
+     * @param UpdateRankRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function update($id, UpdateRankRequest $request)
     {
         $rank = Rank::findOrFail($id);
         return $this->ranks->update($rank,$request->all());
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete($id)
+    {
+        $rank = Rank::findOrFail($id);
+        return $this->ranks->delete($rank);
     }
 
 
