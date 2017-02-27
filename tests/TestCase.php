@@ -18,7 +18,7 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
      *
      * @var string
      */
-    protected $baseUrl = 'http://rrf.app';
+    protected $baseUrl = 'http://l5boilerplate.dev';
 
     /**
      * @var
