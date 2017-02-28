@@ -23,7 +23,7 @@ class ApplicationController extends Controller
     protected $application;
 
     /**
-     * UserController constructor.
+     * ApplicationController constructor.
      * @param ApplicationRepository $application
      */
     public function __construct(ApplicationRepository $application)

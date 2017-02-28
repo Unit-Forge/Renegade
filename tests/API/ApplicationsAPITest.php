@@ -27,7 +27,7 @@ class ApplicationsAPITest extends TestCase
 
     /**
      * @group users-application-api
-     * Tests creating a rank - no authentication
+     * Tests creating a application - no authentication
      */
     public function testCreatingApplication()
     {
@@ -67,7 +67,7 @@ class ApplicationsAPITest extends TestCase
      * @group users-application-api
      * Tests deleting an application
      */
-    public function testDeleteRank()
+    public function testDeleteApplication()
     {
         // Create a App
         $user = \Renegade\Models\Access\User\User::create(['name' => 'John Doe', 'email' => 'test@test.com', 'password' => bcrypt('1234')]);
