@@ -36,6 +36,13 @@ Route::group([
     Route::post('users/{id}/application', 'ApplicationController@create')->name('api.auth.users.application.create');
     Route::put('users/{id}/application', 'ApplicationController@update')->name('api.auth.users.application.update');
     Route::delete('users/{id}/application', 'ApplicationController@delete')->name('api.auth.users.application.delete');
+
+    Route::get('users/{user_id}/teamspeak', 'TeamspeakController@index')->name('api.auth.users.teamspeak');
+    Route::post('users/{user_id}/teamspeak', 'TeamspeakController@create')->name('api.auth.users.teamspeak.create');
+    Route::get('users/{user_id}/teamspeak/{teamspeak_id}', 'TeamspeakController@show')->name('api.auth.users.teamspeak.show');
+    Route::put('users/{user_id}/teamspeak/{teamspeak_id}', 'TeamspeakController@update')->name('api.auth.users.teamspeak.update');
+    Route::delete('users/{user_id}/teamspeak/{teamspeak_id}', 'TeamspeakController@delete')->name('api.auth.users.teamspeak.delete');
+
 });
 
 
