@@ -57,3 +57,20 @@ Route::group([
     Route::put('ranks/{id}', 'RankController@update')->name('api.unit.ranks.update');
     Route::delete('ranks/{id}', 'RankController@delete')->name('api.unit.ranks.delete');
 });
+
+Route::group([
+    'prefix' => 'site',
+    'namespace' => 'API\Site'
+], function () {
+    Route::get('menus', 'MenuController@index')->name('api.site.menus');
+    Route::post('menus', 'MenuController@create')->name('api.site.menus.create');
+    Route::get('menus/{id}', 'MenuController@show')->name('api.site.menus.show');
+    Route::put('menus/{id}', 'MenuController@update')->name('api.site.menus.update');
+    Route::delete('menus/{id}', 'MenuController@delete')->name('api.site.menus.delete');
+
+    Route::get('menus/{menu}/menu-item', 'MenuItemController@index')->name('api.site.menus.items');
+    Route::post('menus/{menu}/menu-item', 'MenuItemController@create')->name('api.site.menus.items.create');
+    Route::get('menus/{menu}/menu-item/{item}', 'MenuItemController@show')->name('api.site.menus.items.show');
+    Route::put('menus/{menu}/menu-item/{item}', 'MenuItemController@update')->name('api.site.menus.items.update');
+    Route::delete('menus/{menu}/menu-item/{item}', 'MenuItemController@delete')->name('api.site.menus.items.delete');
+});
