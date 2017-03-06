@@ -57,3 +57,20 @@ Route::group([
     Route::put('ranks/{id}', 'RankController@update')->name('api.unit.ranks.update');
     Route::delete('ranks/{id}', 'RankController@delete')->name('api.unit.ranks.delete');
 });
+
+Route::group([
+    'prefix' => 'site',
+    'namespace' => 'API\Site'
+], function () {
+    Route::get('categories', 'CategoryController@index')->name('api.site.categories');
+    Route::post('categories', 'CategoryController@create')->name('api.site.categories.create');
+    Route::get('categories/{id}', 'CategoryController@show')->name('api.site.categories.show');
+    Route::put('categories/{id}', 'CategoryController@update')->name('api.site.categories.update');
+    Route::delete('categories/{id}', 'CategoryController@delete')->name('api.site.categories.delete');
+
+    Route::get('pages', 'PageController@index')->name('api.site.pages');
+    Route::post('pages', 'PageController@create')->name('api.site.pages.create');
+    Route::get('pages/{id}', 'PageController@show')->name('api.site.pages.show');
+    Route::put('pages/{id}', 'PageController@update')->name('api.site.pages.update');
+    Route::delete('pages/{id}', 'PageController@delete')->name('api.site.pages.delete');
+});
