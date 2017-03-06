@@ -1,32 +1,32 @@
 <?php
 
-namespace Renegade\Repositories\API\Unit;
+namespace Renegade\Repositories\API\Site;
 
 use Renegade\Events\API\Unit\RankCreated;
 use Renegade\Models\Access\User\User;
-use Renegade\Models\Unit\Rank;
+use Renegade\Models\Site\Menu;
 use Renegade\Repositories\Repository;
 use Illuminate\Support\Facades\DB;
 use Renegade\Exceptions\GeneralException;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class UserRepository.
+ * Class MenuRepository.
  */
-class RankRepository extends Repository
+class MenuRepository extends Repository
 {
     /**
      * Associated Repository Model.
      */
-    const MODEL = Rank::class;
+    const MODEL = Menu::class;
 
     /**
      * @return \Illuminate\Http\JsonResponse
      */
-    public function getAllRanks()
+    public function getAllMenus()
     {
-        $ranks = Rank::all();
-        return response()->json($ranks->toArray());
+        $menus = Menu::all();
+        return response()->json($menus->toArray());
     }
 
     /**
@@ -35,41 +35,41 @@ class RankRepository extends Repository
      */
     public function create($input)
     {
-        $rank = Rank::create($input);
-        return response()->json($rank->toArray(),201);
+        $menu = Menu::create($input);
+        return response()->json($menu->toArray(),201);
     }
 
     /**
-     * @param Model $rank
+     * @param Model $menu
      * @return \Illuminate\Http\JsonResponse
      */
-    public function show(Model $rank)
+    public function show(Model $menu)
     {
-        return response()->json($rank->toArray(),200);
+        return response()->json($menu->toArray(),200);
     }
 
     /**
-     * @param Model $rank
+     * @param Model $menu
      * @param array $input
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Model $rank, array $input)
+    public function update(Model $menu, array $input)
     {
-        if($rank->update($input))
+        if($menu->update($input))
         {
-            return response()->json($rank->toArray(),200);
+            return response()->json($menu->toArray(),200);
         } else {
             return response()->json(['error' => trans('exceptions.api.ranks.update_error')],404);
         }
     }
 
     /**
-     * @param Model $rank
+     * @param Model $menu
      * @return \Illuminate\Http\JsonResponse
      */
-    public function delete(Model $rank)
+    public function delete(Model $menu)
     {
-        if($rank->delete())
+        if($menu->delete())
         {
             return response()->json([],204);
         } else {

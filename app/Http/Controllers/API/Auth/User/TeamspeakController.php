@@ -11,6 +11,10 @@ use Renegade\Models\Access\User\Teamspeak;
 use Renegade\Models\Access\User\User;
 use Renegade\Repositories\API\Auth\User\TeamspeakRepository;
 
+/**
+ * Class TeamspeakController
+ * @package Renegade\Http\Controllers\API\Auth\User
+ */
 class TeamspeakController extends Controller
 {
     /**
@@ -27,24 +31,44 @@ class TeamspeakController extends Controller
         $this->teamspeak = $teamspeak;
     }
 
+    /**
+     * @param $user
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function index($user)
     {
         $user = User::findOrFail($user);
         return $this->teamspeak->getAllTeamspeaks($user);
     }
 
+    /**
+     * @param $user
+     * @param $teamspeak
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function show($user, $teamspeak)
     {
         $teamspeak = Teamspeak::findOrFail($teamspeak);
         return $this->teamspeak->show($teamspeak);
     }
 
+    /**
+     * @param $user
+     * @param CreateTeamspeakRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function create($user, CreateTeamspeakRequest $request)
     {
         $user = User::findOrFail($user);
         return $this->teamspeak->create($user,$request->all());
     }
 
+    /**
+     * @param $user
+     * @param $teamspeak
+     * @param UpdateTeamspeakRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function update($user, $teamspeak, UpdateTeamspeakRequest $request)
     {
         $user = User::findOrFail($user);
@@ -52,6 +76,12 @@ class TeamspeakController extends Controller
         return $this->teamspeak->update($teamspeak, $request->all());
     }
 
+    /**
+     * @param $user
+     * @param $teamspeak
+     * @param DeleteTeamspeakRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function delete($user, $teamspeak, DeleteTeamspeakRequest $request)
     {
         $user = User::findOrFail($user);
