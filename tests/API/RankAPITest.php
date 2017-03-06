@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class RankAPITest extends TestCase
 {
     /**
-     * @group users-ranks-api
+     * @group units-ranks-api
      * Tests getting all ranks
      */
     public function testGetRanks()
@@ -24,7 +24,7 @@ class RankAPITest extends TestCase
     }
 
     /**
-     * @group users-ranks-api
+     * @group units-ranks-api
      * Tests getting all ranks
      */
     public function testGetRank()
@@ -40,7 +40,7 @@ class RankAPITest extends TestCase
     }
 
     /**
-     * @group users-ranks-api
+     * @group units-ranks-api
      * Tests creating a rank - no authentication
      */
     public function testCreatingRank()
@@ -56,7 +56,7 @@ class RankAPITest extends TestCase
 
 
     /**
-     * @group users-ranks-api
+     * @group units-ranks-api
      * Tests updating a rank
      */
     public function testUpdateRank()
@@ -73,7 +73,7 @@ class RankAPITest extends TestCase
     }
 
     /**
-     * @group users-ranks-api
+     * @group units-ranks-api
      * Tests deleting a rank
      */
     public function testDeleteRank()
