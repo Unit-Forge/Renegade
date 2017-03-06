@@ -73,4 +73,23 @@ Route::group([
     Route::get('menus/{menu}/menu-item/{item}', 'MenuItemController@show')->name('api.site.menus.items.show');
     Route::put('menus/{menu}/menu-item/{item}', 'MenuItemController@update')->name('api.site.menus.items.update');
     Route::delete('menus/{menu}/menu-item/{item}', 'MenuItemController@delete')->name('api.site.menus.items.delete');
+
+
+});
+
+Route::group([
+    'prefix' => 'site',
+    'namespace' => 'API\Site'
+], function () {
+    Route::get('categories', 'CategoryController@index')->name('api.site.categories');
+    Route::post('categories', 'CategoryController@create')->name('api.site.categories.create');
+    Route::get('categories/{id}', 'CategoryController@show')->name('api.site.categories.show');
+    Route::put('categories/{id}', 'CategoryController@update')->name('api.site.categories.update');
+    Route::delete('categories/{id}', 'CategoryController@delete')->name('api.site.categories.delete');
+
+    Route::get('pages', 'PageController@index')->name('api.site.pages');
+    Route::post('pages', 'PageController@create')->name('api.site.pages.create');
+    Route::get('pages/{id}', 'PageController@show')->name('api.site.pages.show');
+    Route::put('pages/{id}', 'PageController@update')->name('api.site.pages.update');
+    Route::delete('pages/{id}', 'PageController@delete')->name('api.site.pages.delete');
 });
