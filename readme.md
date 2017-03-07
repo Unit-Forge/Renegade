@@ -2,6 +2,7 @@
 Contributors: 
 Dill, J.  
 Rodriguez, G.
+Dooley, J
 
 A complete milsim/clan unit management system built on Laravel with a responsive website.
 
