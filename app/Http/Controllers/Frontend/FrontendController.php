@@ -3,6 +3,7 @@
 namespace Renegade\Http\Controllers\Frontend;
 
 use Renegade\Http\Controllers\Controller;
+use Renegade\Models\Site\Menu;
 
 /**
  * Class FrontendController.

@@ -13,7 +13,8 @@
 
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>{{ link_to_route('frontend.macros', trans('navs.frontend.macros')) }}</li>
+                {!! \Renegade\Models\Site\Menu::find(1)->showMenu() !!}
+
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
