@@ -34,7 +34,6 @@ class MenuItemController extends Controller
 
     /**
      * @param $menu
-     * @param $menuitem
      * @return \Illuminate\Http\JsonResponse
      */
     public function index($menu)
