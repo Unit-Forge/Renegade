@@ -39,16 +39,9 @@ class RoleTableSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name'       => 'Executive',
-                'all'        => false,
-                'sort'       => 2,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [
                 'name'       => 'User',
                 'all'        => false,
-                'sort'       => 3,
+                'sort'       => 2,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

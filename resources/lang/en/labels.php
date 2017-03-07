@@ -97,6 +97,18 @@ return [
                 'view' => 'View User',
             ],
         ],
+        'site' => [
+            'pages' => [
+                'management'          => 'Page Management',
+                'all'          => 'All Pages',
+                'table' => [
+                    'created'        => 'Created',
+                    'id'             => 'ID',
+                    'last_updated'   => 'Last Updated',
+                    'title'          => 'Title',
+                ],
+            ],
+        ],
     ],
 
     'frontend' => [

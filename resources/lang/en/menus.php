@@ -36,6 +36,15 @@ return [
                 'view'            => 'View User',
             ],
         ],
+        'site' => [
+            'pages' => [
+                'all'        => 'All Pages',
+                'create'     => 'Create Page',
+                'edit'       => 'Edit Page',
+                'management' => 'Page Management',
+                'main'       => 'Pages',
+            ],
+        ],
 
         'log-viewer' => [
             'main'      => 'Log Viewer',

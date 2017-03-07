@@ -20,6 +20,29 @@ class PageRepository extends Repository
      */
     const MODEL = Page::class;
 
+
+    public function getForDataTable($status = 1, $trashed = false)
+    {
+        /**
+         * Note: You must return deleted_at or the User getActionButtonsAttribute won't
+         * be able to differentiate what buttons to show for each row.
+         */
+        $dataTableQuery = $this->query()
+            ->select([
+                'pages'.'.id',
+                 'pages'.'.title',
+                 'pages'.'.created_at',
+                 'pages'.'.updated_at',
+                 'pages'.'.deleted_at',
+            ]);
+
+        if ($trashed == 'true') {
+            return $dataTableQuery->onlyTrashed();
+        }
+
+        return $dataTableQuery;
+    }
+
     /**
      * @return \Illuminate\Http\JsonResponse
      */
