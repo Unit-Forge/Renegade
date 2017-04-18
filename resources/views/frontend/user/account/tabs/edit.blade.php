@@ -1,9 +1,16 @@
-{{ Form::model($logged_in_user, ['route' => 'frontend.user.profile.update', 'class' => 'form-horizontal', 'method' => 'PATCH']) }}
+{{ Form::model($logged_in_user, ['route' => 'frontend.user.profile.update', 'class' => 'form-horizontal', 'files' => true, 'method' => 'PATCH']) }}
 
     <div class="form-group">
         {{ Form::label('name', trans('validation.attributes.frontend.name'), ['class' => 'col-md-4 control-label']) }}
         <div class="col-md-6">
             {{ Form::input('text', 'name', null, ['class' => 'form-control', 'placeholder' => trans('validation.attributes.frontend.name')]) }}
+        </div>
+    </div>
+
+    <div class="form-group">
+        {{ Form::label('avatar', trans('validation.attributes.frontend.avatar'), ['class' => 'col-md-4 control-label']) }}
+        <div class="col-md-6">
+            {{ Form::file('avatar', ['class' => 'form-control']) }}
         </div>
     </div>
 

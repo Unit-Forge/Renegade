@@ -51,6 +51,7 @@
                             @endauth
 
                             <li>{{ link_to_route('frontend.user.account', trans('navs.frontend.user.account')) }}</li>
+                            <li>{{ link_to_route('frontend.user.inbox', trans('navs.frontend.my-inbox.inbox')) }}</li>
                             <li>{{ link_to_route('frontend.auth.logout', trans('navs.general.logout')) }}</li>
                         </ul>
                     </li>

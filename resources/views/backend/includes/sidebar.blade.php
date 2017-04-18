@@ -67,6 +67,54 @@
                 </li>
             @endauth
 
+            @permissions(['manage-site', 'manage-roles'])
+            <li class="{{ Active::pattern('admin/site/*') }} treeview">
+                <a href="#">
+                    <i class="fa fa-file-text-o"></i>
+                    <span>{{ trans('menus.backend.site.title') }}</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+
+                <ul class="treeview-menu {{ Active::pattern('admin/site/*', 'menu-open') }}" style="display: none; {{ Active::pattern('admin/site/*', 'display: block;') }}">
+                    @permission('manage-blog')
+                    <li class="{{ Active::pattern('admin/site/categories*') }}">
+                        <a href="{{ route('admin.site.pages.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>{{ trans('menus.backend.site.categories.management') }}</span>
+                        </a>
+                    </li>
+                    @endauth
+
+                    @permission('manage-menus')
+                    <li class="{{ Active::pattern('admin/site/menus*') }}">
+                        <a href="{{ route('admin.site.pages.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>{{ trans('menus.backend.site.menus.management') }}</span>
+                        </a>
+                    </li>
+                    @endauth
+
+                    @permission('manage-pages')
+                    <li class="{{ Active::pattern('admin/site/pages*') }}">
+                        <a href="{{ route('admin.site.pages.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>{{ trans('menus.backend.site.pages.management') }}</span>
+                        </a>
+                    </li>
+                    @endauth
+
+                    @permission('manage-blog')
+                    <li class="{{ Active::pattern('admin/site/posts*') }}">
+                        <a href="{{ route('admin.site.pages.index') }}">
+                            <i class="fa fa-circle-o"></i>
+                            <span>{{ trans('menus.backend.site.posts.management') }}</span>
+                        </a>
+                    </li>
+                    @endauth
+                </ul>
+            </li>
+            @endauth
+
             <li class="header">{{ trans('menus.backend.sidebar.system') }}</li>
 
             <li class="{{ Active::pattern('admin/log-viewer*') }} treeview">

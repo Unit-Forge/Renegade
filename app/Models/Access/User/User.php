@@ -11,11 +11,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Renegade\Models\Access\User\Traits\UserSendPasswordReset;
 use Renegade\Models\Access\User\Traits\Attribute\UserAttribute;
 use Renegade\Models\Access\User\Traits\Relationship\UserRelationship;
+use Cmgmyr\Messenger\Traits\Messagable;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use Spatie\MediaLibrary\HasMedia\Interfaces\HasMedia;
 
 /**
  * Class User.
  */
-class User extends Authenticatable
+class User extends Authenticatable implements HasMedia
 {
     use HasApiTokens,
         UserScope,
@@ -24,7 +27,9 @@ class User extends Authenticatable
         SoftDeletes,
         UserAttribute,
         UserRelationship,
-        UserSendPasswordReset;
+        UserSendPasswordReset,
+        HasMediaTrait,
+        Messagable;
 
     /**
      * The database table used by the model.
@@ -77,5 +82,15 @@ class User extends Authenticatable
     public function teamspeak()
     {
         return $this->hasMany('Renegade\Models\Access\User\Teamspeak');
+    }
+
+    public function getAvatar()
+    {
+
+        if($this->getMedia('profile')->count() > 0)
+        {
+            return $this->getMedia('profile')->first()->getUrl();
+        }
+        return '/img/user-default.png';
     }
 }

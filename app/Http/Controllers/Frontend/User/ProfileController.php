@@ -35,6 +35,12 @@ class ProfileController extends Controller
     {
         $this->user->updateProfile(access()->id(), $request->all());
 
+        if($request->hasFile('avatar'))
+        {
+            \Auth::User()->clearMediaCollection('profile');
+            \Auth::User()->addMedia($request->file('avatar'))->toCollection('profile');
+        }
+
         return redirect()->route('frontend.user.account')->withFlashSuccess(trans('strings.frontend.user.profile_updated'));
     }
 }

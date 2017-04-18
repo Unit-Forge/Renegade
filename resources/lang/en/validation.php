@@ -155,6 +155,7 @@ return [
 
         'frontend' => [
             'email'                     => 'E-mail Address',
+            'avatar'                    => 'Avatar',
             'name'                      => 'Name',
             'password'                  => 'Password',
             'password_confirmation'     => 'Password Confirmation',

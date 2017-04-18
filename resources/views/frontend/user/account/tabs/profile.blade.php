@@ -1,7 +1,7 @@
 <table class="table table-striped table-hover">
     <tr>
         <th>{{ trans('labels.frontend.user.profile.avatar') }}</th>
-        <td><img src="{{ $logged_in_user->picture }}" class="user-profile-image" /></td>
+        <td><img src="{{ $logged_in_user->getAvatar() }}" style="max-height: 200px; max-width: 200px;" class="user-profile-image" /></td>
     </tr>
     <tr>
         <th>{{ trans('labels.frontend.user.profile.name') }}</th>

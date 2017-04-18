@@ -39,6 +39,7 @@
 
             <div class="container">
                 @include('includes.partials.messages')
+                @include('flash::message')
                 @yield('content')
             </div><!-- container -->
         </div><!--#app-->
