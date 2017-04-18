@@ -36,6 +36,44 @@ return [
                 'view'            => 'View User',
             ],
         ],
+        'site' => [
+            'title' => 'Site Management',
+            'categories' => [
+                'all'        => 'All Categories',
+                'create'     => 'Create Category',
+                'edit'       => 'Edit Category',
+                'management' => 'Category Management',
+                'main'       => 'Categories',
+            ],
+            'menus' => [
+                'all'        => 'All Menus',
+                'create'     => 'Create Menu',
+                'edit'       => 'Edit Menu',
+                'management' => 'Menu Management',
+                'main'       => 'Menus',
+            ],
+            'menu-items' => [
+                'all'        => 'All Menu Items',
+                'create'     => 'Create Menu Item',
+                'edit'       => 'Edit Menu Item',
+                'management' => 'Menu Item Management',
+                'main'       => 'Menu Items',
+            ],
+            'posts' => [
+                'all'        => 'All Posts',
+                'create'     => 'Create Post',
+                'edit'       => 'Edit Post',
+                'management' => 'Post Management',
+                'main'       => 'Posts',
+            ],
+            'pages' => [
+                'all'        => 'All Pages',
+                'create'     => 'Create Page',
+                'edit'       => 'Edit Page',
+                'management' => 'Page Management',
+                'main'       => 'Pages',
+            ],
+        ],
 
         'log-viewer' => [
             'main'      => 'Log Viewer',

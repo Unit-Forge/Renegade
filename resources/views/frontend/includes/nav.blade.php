@@ -13,7 +13,8 @@
 
         <div class="collapse navbar-collapse" id="frontend-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li>{{ link_to_route('frontend.macros', trans('navs.frontend.macros')) }}</li>
+                {!! \Renegade\Models\Site\Menu::find(1)->showMenu() !!}
+
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -50,6 +51,7 @@
                             @endauth
 
                             <li>{{ link_to_route('frontend.user.account', trans('navs.frontend.user.account')) }}</li>
+                            <li>{{ link_to_route('frontend.user.inbox', trans('navs.frontend.my-inbox.inbox')) }}</li>
                             <li>{{ link_to_route('frontend.auth.logout', trans('navs.general.logout')) }}</li>
                         </ul>
                     </li>

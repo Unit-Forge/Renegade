@@ -17,7 +17,7 @@
                             <ul class="media-list">
                                 <li class="media">
                                     <div class="media-left">
-                                        <img class="media-object" src="{{ $logged_in_user->picture }}" alt="Profile picture">
+                                        <img class="media-object" src="{{ $logged_in_user->getAvatar() }}" style="max-width: 100px;max-height: 100px;" alt="Profile picture">
                                     </div><!--media-left-->
 
                                     <div class="media-body">

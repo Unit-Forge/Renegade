@@ -122,5 +122,13 @@ return [
         ],
 
         'welcome_to' => 'Welcome to :place',
+
+        'my-inbox' => [
+            'table' => [
+                'creator' => 'Creator',
+                'subject' => 'Subject',
+                'last_response' => 'Last Response'
+            ]
+        ]
     ],
 ];

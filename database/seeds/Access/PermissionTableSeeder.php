@@ -70,6 +70,43 @@ class PermissionTableSeeder extends Seeder
         $manageRoles->updated_at = Carbon::now();
         $manageRoles->save();
 
+        $permission_model = config('access.permission');
+        $manageRoles = new $permission_model();
+        $manageRoles->name = 'manage-site';
+        $manageRoles->display_name = 'Manage Site (all)';
+        $manageRoles->sort = 4;
+        $manageRoles->created_at = Carbon::now();
+        $manageRoles->updated_at = Carbon::now();
+        $manageRoles->save();
+
+        $permission_model = config('access.permission');
+        $manageRoles = new $permission_model();
+        $manageRoles->name = 'manage-pages';
+        $manageRoles->display_name = 'Manage Pages';
+        $manageRoles->sort = 4;
+        $manageRoles->created_at = Carbon::now();
+        $manageRoles->updated_at = Carbon::now();
+        $manageRoles->save();
+
+        $permission_model = config('access.permission');
+        $manageRoles = new $permission_model();
+        $manageRoles->name = 'manage-blog';
+        $manageRoles->display_name = 'Manage Blog';
+        $manageRoles->sort = 5;
+        $manageRoles->created_at = Carbon::now();
+        $manageRoles->updated_at = Carbon::now();
+        $manageRoles->save();
+
+        $permission_model = config('access.permission');
+        $manageRoles = new $permission_model();
+        $manageRoles->name = 'manage-menus';
+        $manageRoles->display_name = 'Manage Menus';
+        $manageRoles->sort = 6;
+        $manageRoles->created_at = Carbon::now();
+        $manageRoles->updated_at = Carbon::now();
+        $manageRoles->save();
+
+
         if (DB::connection()->getDriverName() == 'mysql') {
             DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         }

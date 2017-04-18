@@ -31,5 +31,12 @@ return [
             'my_information'  => 'My Information',
             'profile'         => 'Profile',
         ],
+
+        'my-inbox' => [
+            'inbox' => 'My Inbox',
+            'create' => 'Compose new message',
+            'show' => 'View Thread',
+            'edit' => 'Edit Message'
+        ]
     ],
 ];

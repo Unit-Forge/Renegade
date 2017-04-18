@@ -29,4 +29,15 @@ class Menu extends Model
     {
         return $this->hasMany('Renegade\Models\Site\MenuItem');
     }
+
+
+    public function showMenu()
+    {
+        $menu = "";
+        foreach ($this->menuItems as $item)
+        {
+            $menu .= '<li><a href="'.$item->url.'">'.$item->title.'</a></li>';
+        }
+        return $menu;
+    }
 }
